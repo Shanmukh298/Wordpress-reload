@@ -1,0 +1,22 @@
+name: Deploy WordPress to VPS
+
+     on:
+       push:
+         branches:
+           - main
+
+     jobs:
+       deploy:
+         runs-on: ubuntu-latest
+         steps:
+           - name: Checkout code
+             uses: actions/checkout@v3
+
+           - name: Install dependencies
+             run: |
+               sudo apt update
+               sudo apt install rsync -y
+
+           - name: Deploy to VPS
+             run: |
+               rsync -avz --delete -e "ssh -i ${{ secrets.SSH_PRIVATE_KEY }}" ./ ubuntu@your-server-ip:/var/www/your-domain.com
