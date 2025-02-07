@@ -17,10 +17,9 @@ Installed PHP and necessary extensions.
 * Step 4: Securing WordPress with SSL (Let's Encrypt):
 Installed Certbot for free SSL,Set up automatic SSL renewal.
 3.4
-step5:Automating Deployment with GitHub Actions:Created a GitHub repository (e.g., wordpress-deploy),Cloned the repository on the VPS.
-5.1: Setting Up the GitHub Repository:
-Created a GitHub repository (e.g., wordpress-deploy).
-Cloned the repository on the VPS.git clone https://github.com/yourusername/wordpress-deploy.git
+Step5:Automating Deployment with GitHub Actions:Created a GitHub repository (e.g., wordpress-deploy),Cloned the repository on the VPS.
+5.1: Setting Up the GitHub Repository:Created a GitHub repository (e.g., wordpress-deploy).
+Cloned the repository on the VPS.git clone: https://github.com/yourusername/wordpress-deploy.git
 5.2 Setting Up GitHub Actions Workflow:Created the GitHub Actions workflow file,Added the deployment script,
 5.3 Configuring GitHub Secrets:
 Added the following secrets to GitHub repository settings:
@@ -33,6 +32,7 @@ Committed and pushed the workflow to
 ---->git commit -m "Automated deployment setup"
 ---->git push origin main
 ---->Checked GitHub Actions → Actions tab to verify deployment.
+
 CONCLUSION: This setup allows automatic deployment whenever code is pushed to the main branch. The combination of LEMP, Nginx, SSL, and GitHub Actions ensures a secure, scalable, and automated deployment process.
 
 
